@@ -12,4 +12,4 @@ purchase and look at all the orders on the Orders Page
 
 ## Angular Front End Github Link
 
-https://github.com/tarunsingh002/Ecommerce-Electronics-Mat-Front-End
+https://github.com/tarunsingh002/store-frontend
