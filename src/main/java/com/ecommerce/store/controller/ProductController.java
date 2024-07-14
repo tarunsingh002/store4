@@ -69,4 +69,9 @@ public class ProductController {
     public Product getProduct(@PathVariable int id) {
         return service.getProductById(id);
     }
+
+    @GetMapping("/api/v1/all/getallproducts")
+    public List<Product> getAllProducts() {
+        return service.getAllProducts();
+    }
 }

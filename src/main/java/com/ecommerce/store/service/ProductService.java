@@ -31,7 +31,7 @@ public class ProductService {
         if (pageNumber != -1) {
             Sort sort = direction.equalsIgnoreCase("asc") ? Sort.by(sortBy).ascending() : Sort.by(sortBy).descending();
             Pageable p = PageRequest.of(pageNumber, pageSize, sort);
-            
+
             Page<Product> pageProduct = repository.findAll(p);
 
             return ProductResponse.builder().products(pageProduct.getContent())
@@ -146,5 +146,9 @@ public class ProductService {
             return repository.save(existingProduct);
         } else return null;
 
+    }
+
+    public List<Product> getAllProducts() {
+        return repository.findAll();
     }
 }
